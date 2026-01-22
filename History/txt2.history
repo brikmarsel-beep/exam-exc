@@ -1,0 +1,833 @@
+    1  sudo sed -i 's#http://archive.ubuntu.com/ubuntu#http://il.archive.ubuntu.com/ubuntu#g' /etc/apt/sources.list
+    2  sudo sed -i 's#http://security.ubuntu.com/ubuntu#http://il.archive.ubuntu.com/ubuntu#g' /etc/apt/sources.list
+    3  sudo sed -i 's#http://security.ubuntu.com/ubuntu#http://il.archive.ubuntu.com/ubuntu#g' /etc/apt/sources.list
+    4  sudo apt update
+    5  sudo sed -i 's#http://il.archive.ubuntu.com/ubuntu#https://mirror.isoc.org.il/pub/ubuntu#g' /etc/apt/sources.list
+    6  sudo sed -i 's#http://archive.ubuntu.com/ubuntu#https://mirror.isoc.org.il/pub/ubuntu#g' /etc/apt/sources.list
+    7  sudo sed -i 's#http://security.ubuntu.com/ubuntu#https://mirror.isoc.org.il/pub/ubuntu#g' /etc/apt/sources.list
+    8  sudo apt update
+    9  sudo apt install -y unzip g++ python3 default-jdk
+   10  cd ~
+   11  zip -r hw3_Marsel_Abu_Saleh.zip hw3
+   12  sudo apt update
+   13  sudo sed -i 's#http://archive.ubuntu.com/ubuntu#http://il.archive.ubuntu.com/ubuntu#g' /etc/apt/sources.list
+   14  sudo sed -i 's#http://security.ubuntu.com/ubuntu#https://mirror.isoc.org.il/pub/ubuntu#g' /etc/apt/sources.list
+   15  cd /mnt/c/Users/ASUS/Desktop
+   16  ls
+   17  polyglot_demo_package.zip
+   18  ls /mnt/c/Users/ASUS/Desktop
+   19  cd /mnt/c/Users/ASUS/Desktop
+   20  unzip polyglot_demo_package.zip
+   21  sudo apt install -y unzip
+   22  ls
+   23  Operation not permitted
+   24  mkdir ~/hw3
+   25  cp polyglot_demo.sh ~/hw3
+   26  cd ~/hw3
+   27  ls
+   28  chmod +x polyglot_demo.sh
+   29  ./polyglot_demo.sh
+   30  mkdir ~/hw3
+   31  cp polyglot_demo.sh ~/hw3
+   32  cd ~/hw3
+   33  chmod +x polyglot_demo.sh
+   34  ./polyglot_demo.sh
+   35  code ~/hw3/polyglot_demo.sh
+   36  mars@DESKTOP-7C1I5D8:~$ cd ~
+   37  p -r hw3mars@DESKTOP-7C1I5D8:~$ zip -r hw3_Marsel_Abu_Saleh.zip hw3
+   38  Command 'zip' not found, but can be installed with:
+   39  sudo apt install zip
+   40  sudo apt install -y zip
+   41  zip -r hw3_Marsel_Abu_Saleh.zip hw3
+   42  cd ~
+   43  ls
+   44  zip -r hw3_Marsel_Abu_Saleh.zip hw3
+   45  cp hw3_Marsel_Abu_Saleh.zip /mnt/c/Users/ASUS/Desktop
+   46  code .
+   47  cd ~/hw3/polyglot_demo
+   48  rm -rf Reporter/bin Reporter/obj
+   49  rm -rf DotNetApp/bin DotNetApp/obj
+   50  rm -f *.class
+   51  rm -f app_cpp
+   52  rm -f filter
+   53  mkdir ~/PloylyglotApp
+   54  cp gen.py ~/PloylyglotApp
+   55  cp filter.cpp ~/PloylyglotApp
+   56  cp Processor.java ~/PloylyglotApp
+   57  cp Reporter/Program.cs ~/PloylyglotApp
+   58  cp ../polyglot_demo.sh ~/PloylyglotApp/script.sh
+   59  cd ~
+   60  zip -r PloylyglotApp_Marsel_Abu_Saleh.zip PloylyglotApp
+   61  cp PloylyglotApp_Marsel_Abu_Saleh.zip /mnt/c/Users/ASUS/Desktop
+   62  ../script.sh
+   63  cd ~/PloylyglotApp
+   64  chmod +x script.sh
+   65  ./script.sh
+   66  ./script.sh > output.txt
+   67  ./script.sh | tee output.txt
+   68  ./script.sh
+   69  cat /etc/os-release
+   70  nano script.sh
+   71  chmod +x script.sh
+   72  ./script.sh
+   73  cat data.log
+   74  mkdir -p ~/PolyglotApp/Data
+   75  cd ~/PolyglotApp
+   76  echo "hello" > Data/c.txt
+   77  ls Data
+   78  nano script.sh
+   79  ./script.sh Data/c.txt v1
+   80  chmod +x script.sh
+   81  ./script.sh Data/c.txt v1
+   82  ./script.sh Data/c_v1.txt v2 > output.txt
+   83  cat output.txt
+   84  mkdir todo_system
+   85  cd todo_system
+   86  mkdir todo_system
+   87  cd todo_system
+   88  cat /etc/os-release
+   89  cat > tasks.csv << 'EOF'
+   90  ID,Task,Status,Priority,Owner
+   91  1,Install Ubuntu,Done,High,Alex
+   92  2,Write Homework,In Progress,High,Noa
+   93  3,Buy Coffee,Pending,Low,Dana
+   94  4,Create Backup Script,Pending,Medium,Alex
+   95  5,Update GitHub Repo,Done,Medium,Noa
+   96  EOF
+   97  Scat tasks.csv
+   98  cat tasks.csv
+   99  wc -l tasks.csv
+  100  grep ",Done," tasks.csv
+  101  cut -d',' -f2 tasks.csv
+  102  cut -d',' -f2 tasks.csv > task_names.txt
+  103  cat task_names.txt
+  104  cut -d',' -f5 tasks.csv | sort | uniq
+  105  cut -d',' -f5 tasks.csv | sort | uniq -c
+  106  echo "==== PENDING TASKS ====" > pending.txt
+  107  grep ",Pending," tasks.csv | cut -d',' -f2,4 >> pending.txt
+  108  cat pending.txt
+  109  history > history.log
+  110  tail -n 20 history.log
+  111  echo "=== REPORT ===" > report.txt
+  112  echo "Date: $(date)" >> report.txt
+  113  echo "" >> report.txt
+  114  echo "DONE:" >> report.txt
+  115  grep ",Done," tasks.csv >> report.txt
+  116  echo "" >> report.txt
+  117  echo "PENDING:" >> report.txt
+  118  grep ",Pending," tasks.csv >> report.txt
+  119  cat report.txt
+  120  cd ..
+  121  zip -r todo_system_Marsel_322222217.zip todo_system
+  122  cp todo_system_Marsel_322222217.zip /mnt/c/Users/ASUS/Desktop
+  123  mkdir Linux_HW
+  124  cd Linux_HW
+  125  code reveal_effect.sh
+  126  #!/bin/bash
+  127  # בדיקת מספר פרמטרים
+  128  if [ $# -lt 4 ]; then   echo "Usage: $0 -f <image_path> -o <output_name> -q <1-100> -n <frames>";   exit 1; fi
+  129  while getopts "f:u:o:q:n:s" opt; do   case $opt in     f) IMAGE_PATH=$OPTARG ;;     u) IMAGE_URL=$OPTARG ;;     o) OUTPUT_NAME=$OPTARG ;;     q) START_QUALITY=$OPTARG ;;     n) FRAMES=$OPTARG ;;     s) SAVE_OUTPUT=true ;;     *) echo "Invalid option"; exit 1 ;;   esac; done
+  130  if ! command -v convert >/dev/null; then   echo "ERROR: imagemagick not installed";   exit 1; fi
+  131  if ! command -v convert >/dev/null; then   echo "ERROR: imagemagick not installed";   exit 1; fi
+  132  which convert
+  133  sudo apt update
+  134  convert -version
+  135  chmod +x reveal_effect.sh
+  136  cd ~
+  137  mkdir -p Pixeling_Image_HW
+  138  cd Pixeling_Image_HW
+  139  pwd
+  140  ls
+  141  command -v convert
+  142  convert -version
+  143  code reveal_effect.sh
+  144  #!/bin/bash
+  145  if [ $# -lt 8 ]; then   echo "Usage: $0 -f <image_path> -o <output_name> -q <1-100> -n <frames>";   exit 1; fi
+  146  ls
+  147  cd ~/Pixeling_Image_HW
+  148  ls
+  149  cd ~/Pixeling_Image_HW
+  150  code reveal_effect.sh
+  151  #!/bin/bash
+  152  if [ $# -lt 2 ]; then   echo "Usage: $0 <image> <output>";   exit 1; fi
+  153  cd ~/Pixeling_Image_HW
+  154  pwd
+  155  rm -f reveal_effect.sh
+  156  code reveal_effect.sh
+  157  #!/bin/bash
+  158  if [ $# -lt 2 ]; then   echo "Usage: $0 <image> <output>";   exit 1; fi
+  159  cd ~/Pixeling_Image_HW
+  160  ls
+  161  code reveal_effect.sh
+  162  chmod +x reveal_effect.sh
+  163  ls -l
+  164  cat > reveal_effect.sh << 'EOF'
+  165  #!/bin/bash
+  166  if [ $# -lt 2 ]; then
+  167    echo "Usage: $0 <image> <output_prefix>"
+  168    exit 1
+  169  fi
+  170  IMAGE=$1
+  171  OUT=$2
+  172  if ! command -v convert >/dev/null; then
+  173    echo "ImageMagick not installed"
+  174    exit 1
+  175  fi
+  176  mkdir -p frames
+  177  for i in 10 20 30 40 50 60 70 80 90 100; do
+  178    convert "$IMAGE" -resize ${i}% "frames/${OUT}_${i}.png"
+  179    echo "Created frame ${OUT}_${i}.png"
+  180  done
+  181  echo "Done"
+  182  EOF
+  183  ls -l
+  184  chmod +x reveal_effect.sh
+  185  ls -l
+  186  cd ~/Pixeling_Image_HW
+  187  ls
+  188  ./reveal_effect.sh photo.jpg result
+  189  ls
+  190  ls frames
+  191  sudo apt update
+  192  cd ~/Pixeling_Image_HW
+  193  ./reveal_effect.sh IMG_0860.JPG result
+  194  sudo apt install -y imagemagick
+  195  convert -version
+  196  cd ~/Pixeling_Image_HW
+  197  ./reveal_effect.sh IMG_0860.JPG result
+  198  ls
+  199  ls frames
+  200  which convert
+  201  convert -version
+  202  reveal_effect.sh
+  203  cd ~/Pixeling_Image_HW
+  204  ./reveal_effect.sh IMG_0860.JPG result
+  205  Created frame result_10.png
+  206  ...
+  207  Done
+  208  ls frames
+  209  which convert
+  210  convert -version
+  211  cd ~/Pixeling_Image_HW
+  212  /mnt/c/Users/<השם_שלך>/Desktop
+  213  /mnt/c/Users/mars/Desktop
+  214  cd ~
+  215  mkdir -p 07_GIT/REPO_01
+  216  cd 07_GIT
+  217  code .
+  218  cd REPO_01
+  219  nano setup_github_wsl.sh
+  220  chmod +x setup_github_wsl.sh
+  221  ./setup_github_wsl.sh
+  222  git branch -m main
+  223  git config --global init.defaultBranch main
+  224  ssh -T git@github.com
+  225  cat ~/.ssh/id_ed25519.pub
+  226  ssh -T git@github.com
+  227  cat ~/.ssh/id_ed25519.pub
+  228  ssh -T git@github.com
+  229  git remote add origin git@github.com:YOUR_GITHUB_USERNAME/REPO_01.git
+  230  git add .
+  231  git commit -m "Initial commit"
+  232  git push -u origin main
+  233  git remote -v
+  234  git remote remove origin
+  235  git remote add origin git@github.com:USERNAME/REPO.git
+  236  git remote add origin git@github.com:brikmarsel-beep/REPO_01.git
+  237  git remote remove origin
+  238  git remote add origin git@github.com:brikmarsel-beep/REPO_01.git
+  239  git push -u origin main
+  240  git remote -v
+  241  git push -u origin main
+  242  git remote set-url origin git@github.com:brikmarsel-beep/ACTUAL_REPO_NAME.git
+  243  git push -u origin main
+  244  ssh -T git@github.com
+  245  cd ~/07_GIT/REPO_01
+  246  touch 1.txt 2.txt 3.txt 4.txt 5.txt 6.txt
+  247  touch py_1.py py_2.py py_3.py py_4.py py_5.py py_6.py py_7.py py_8.py
+  248  cd ~/07_GIT/REPO_01
+  249  touch 1.txt 2.txt 3.txt 4.txt 5.txt 6.txt
+  250  touch py_1.py py_2.py py_3.py py_4.py py_5.py py_6.py py_7.py py_8.py
+  251  echo "Hello" > 1.txt
+  252  echo 'print("hi")' > py_1.py
+  253  git remote -v
+  254  git remote remove origin 2>/dev/null
+  255  git remote add origin git@github.com:brikmarsel-beep/REPO_01.git
+  256  git remote -v
+  257  git ls-remote origin
+  258  git branch
+  259  git branch -M main
+  260  git status
+  261  git add .
+  262  git commit -m "Add txt and python files"
+  263  git push -u origin main
+  264  git status
+  265  cd ~/07_GIT/REPO_01
+  266  nano README.md
+  267  nano python/app.py
+  268  git diff
+  269  git add python/app.py
+  270  git commit -m "Python: add new feature message"nano README.md
+  271  cd ~/07_GIT/REPO_01
+  272  touch py_1.py
+  273  code py_1.py
+  274  print("New feature added")
+  275  git add py_1.py
+  276  git commit -m "Python: add new feature prints"
+  277  git add README.md
+  278  git commit -m "Docs: add README file"
+  279  git push
+  280  git status
+  281  ls
+  282  ls -a
+  283  cd ~
+  284  cd 07_GIT
+  285  git init
+  286  git add .
+  287  git commit -m "Initial project structure"
+  288  git remote add origin git@github.com:brikmarsel-beep/07_GIT.git
+  289  git branch -M main
+  290  git push -u origin main
+  291  cd ~/07_GIT/REPO_01
+  292  rm -rf .git
+  293  cd ~/07_GIT/REPO_01
+  294  rm -rf .git
+  295  cd ~/07_GIT
+  296  git init
+  297  git add .
+  298  git commit -m "Initial project structure"
+  299  git remote add origin git@github.com:brikmarsel-beep/07_GIT.git
+  300  git branch -M main
+  301  git push -u origin main
+  302  cd ~/07_GIT
+  303  pwd
+  304  /home/mars/07_GIT
+  305  git remote remove origin
+  306  git remote add origin git@github.com:brikmarsel-beep/07_GIT.git
+  307  git remote -v
+  308  git branch -M main
+  309  git push -u origin main
+  310  echo "# 07_GIT" >> README.md
+  311  git init
+  312  git add README.md
+  313  git commit -m "first commit"
+  314  git branch -M main
+  315  git remote add origin git@github.com:brikmarsel-beep/07_GIT.git
+  316  git push -u origin main
+  317  cd ~/07_GIT
+  318  mkdir -p REPO_02
+  319  cd REPO_02
+  320  printf 'print("REPO_2")\n' > py1.py
+  321  cd ~/07_GIT
+  322  git add .
+  323  git commit -m "Add REPO_02 with py1.py"
+  324  git push
+  325  git checkout -b br1
+  326  touch py2.py
+  327  echo 'print("branch br1 file")' > py2.py
+  328  git add py2.py
+  329  git commit -m "Add py2.py on br1"
+  330  git push -u origin br1
+  331  mkdir -p ~/git_hw
+  332  cd ~/git_hw
+  333  nano tasks.csv
+  334  nano commit.sh
+  335  chmod +x commit.sh
+  336  ls -l commit.sh
+  337  # צריך לראות x (הרשאה להרצה)
+  338  nano generate_report.sh
+  339  chmod +x generate_report.sh
+  340  nano .gitignore
+  341  cd ~/git_hw
+  342  ./commit.sh 1000 "initial version"
+  343  cd ~/git_hw
+  344  ./generate_report.sh tasks.csv
+  345  TASK_REPORT.md
+  346  code TASK_REPORT.md
+  347  cd ~/git_hw
+  348  ./commit.sh 1000 "initial version" | tee run_log.txt
+  349  ./generate_report.sh tasks.csv | tee -a run_log.txt
+  350  nano ~/git_hw/commit.sh
+  351  chmod +x ~/git_hw/commit.sh
+  352  cd ~/git_hw
+  353  ./commit.sh 1000 "initial version"
+  354  cd /path/to/repo/of/task1000
+  355  echo "test" >> README.md
+  356  cd ~/git_hw
+  357  ./commit.sh 1000 "initial version"
+  358  cd ~/git_hw
+  359  ./generate_report.sh tasks.csv
+  360  code TASK_REPORT.md
+  361  cd ~/git_hw
+  362  nano tasks.csv
+  363  ls /home/mars
+  364  ls /home/mars/PolyglotApp/.git
+  365  ls /home/mars/todo_system/.git
+  366  cd /home/mars/PolyglotApp
+  367  git init
+  368  git branch -M main
+  369  ls .git
+  370  git checkout -b BR_README
+  371  nano ~/git_hw/tasks.csv
+  372  cd ~/git_hw
+  373  ./commit.sh 1000 "initial version"
+  374  ./generate_report.sh tasks.csv
+  375  code TASK_REPORT.md
+  376  nano ~/git_hw/tasks.csv
+  377  cd /home/mars/PolyglotApp
+  378  git remote -v
+  379  git remote add origin https://github.com/<YOUR_USERNAME>/PolyglotApp.git
+  380  cd ~/git_hw
+  381  ./commit.sh 1000 "initial version"
+  382  cd ~/git_hw
+  383  ./commit.sh 1000 "initial version"
+  384  cd /home/mars/PolyglotApp
+  385  git remote -v
+  386  cd /home/mars/PolyglotApp
+  387  git remote add origin https://github.com/USERNAME/PolyglotApp.git
+  388  git remote -v
+  389  cd ~/git_hw
+  390  ./commit.sh 1000 "initial version"
+  391  cd ~/git_hw
+  392  git remote -v
+  393  cd /home/mars/PolyglotApp
+  394  git remote add origin https://github.com/USERNAME/PolyglotApp.git
+  395  cd /home/mars/PolyglotApp
+  396  git remote add origin https://github.com/USERNAME/PolyglotApp.git
+  397  git remote -v
+  398  cd ~/git_hw
+  399  ./commit.sh 1000 "initial version"
+  400  cd ~/git_hw
+  401  ./commit.sh 1000 "initial version"
+  402  cd ~/git_hw
+  403  ./commit.sh 1000 "initial version"
+  404  cd /home/mars/PolyglotApp
+  405  git remote -v
+  406  git remote remove origin
+  407  git remote add origin https://github.com/brikmarsel-beep/PolyglotApp.git
+  408  git remote -v
+  409  sudo apt update
+  410  cd /home/mars/PolyglotApp
+  411  git push -u origin BR_README
+  412  cd /home/mars/PolyglotApp
+  413  git push -u origin BR_README
+  414  cd /home/mars/PolyglotApp
+  415  git branch
+  416  git checkout -b BR_README
+  417  git checkout BR_README
+  418  git status
+  419  nothing to commit
+  420  echo "update" >> README.md
+  421  git add README.md
+  422  git commit -m "init README"
+  423  git push -u origin BR_README
+  424  sudo apt install gh
+  425  cd /home/mars/PolyglotApp
+  426  git checkout -b BR_README   # אם כבר קיים – git checkout BR_README
+  427  echo "final" >> README.md
+  428  git add README.md
+  429  git commit -m "README for task 1000"
+  430  git push -u origin BR_README
+  431  enerate_report.sh tasks.csv
+  432  code TASK_REPORT.md
+  433  git branch
+  434  git log --oneline --max-count=3
+  435  cd /home/mars/PolyglotApp
+  436  git push -u origin BR_README
+  437  docker --version
+  438  wsl --update
+  439  wsl --update
+  440  sudo apt install wsl
+  441  wsl --update
+  442  docker --version
+  443  wsl --update
+  444  wsl --version
+  445  wsl --update
+  446  sudo apt wsl --update
+  447  sudo apt wsl update
+  448  sudo apt wsl install
+  449  sudo apt update
+  450  wsl --update
+  451  docker --version
+  452  sudo apt install docker.io -y
+  453  sudo service docker start
+  454  sudo usermod -aG docker $USER
+  455  docker --version
+  456  docker run hello-world
+  457  sudo service docker status
+  458  sudo service docker start
+  459  sudo dockerd &
+  460  docker run hello-world
+  461  docker info
+  462  Server Version: ...
+  463  docker logs hopeful_brown
+  464  docker ps
+  465  docker run --name my_test hello-world
+  466  docker logs my_test
+  467  docker ps -a
+  468  docker run hello-world
+  469  docker logs hopeful_brown
+  470  docker logs 1302df74e25d4a1f5b4fc82015b4f2935c47f7cb1d9d4edc959f194a42bd1090
+  471  sudo docker pull alpine
+  472  sudo docker run -i -t --name ALPINE_ENV1 alpine
+  473  locker ps
+  474  dockerv ps
+  475  sudo docker run --name ALPINE_ENV2 alpine echo "LINUX ALPHINE ECHO excuted...."
+  476  docker ps -a
+  477  docker logs ALP
+  478  docker logs ALPINE_ENV2
+  479  docker stop ALPINE_ENV1
+  480  docker start -ai ALPINE
+  481  docker exec -it ALPINE_ENV1 ls
+  482  docker pull node
+  483  clear
+  484  node --version
+  485  sudo apt install nodejs
+  486  node --version
+  487  docker images
+  488  docker pull node
+  489  docker images
+  490  docke run it --rm
+  491  docker run -it --rm
+  492  docker run -it --rm alpine sh
+  493  docker run -it --rm node sh
+  494  docker run -it --rm\
+  495  docker run -it --rm   --name NODE_ENV_APP   -v ${PWD}:/app   -w /app   -p 3000:3000   node   bash
+  496  code ~/git_hw_submit
+  497  code ~/devbox_automation
+  498  cd ~/devbox_automation
+  499  ls -la
+  500  cd ~/devbox_automation
+  501  ./generate_report.sh ./tasks.csv
+  502  ls -la TASK_REPORT.md
+  503  ./commit.sh 1000 "demo"
+  504  ./generate_report.sh ./tasks.csv
+  505  cd ~
+  506  zip -r devbox_automation_submit.zip devbox_automation
+  507  cd ~/git_hw_submit/devbox_automation
+  508  pwd
+  509  ls
+  510  ./generate_report.sh ./tasks.csv
+  511  ls TASK_REPORT.md
+  512  cd ~/git_hw_submit
+  513  zip -r git_hw_submit_final.zip devbox_automation
+  514  unzip -l git_hw_submit_final.zip
+  515  devbox_automation/
+  516  ./commit.sh 1000 "demo"
+  517  ./generate_report.sh ./tasks.csv
+  518  cd ~/git_hw_submit/devbox_automation
+  519  pwd
+  520  ls
+  521  ./commit.sh 1000 "demo"
+  522  ./generate_report.sh ./tasks.csv
+  523  cd devbox_automation
+  524  ./commit.sh 1000 "demo"
+  525  ./generate_report.sh ./tasks.csv
+  526  cd ~/git_hw_submit/devbox_automation
+  527  git init
+  528  git branch -M main
+  529  git remote add origin https://github.com/YOUR_USERNAME/git-hw-submit.git
+  530  git remote -v
+  531  git add tasks.csv commit.sh generate_report.sh TASK_REPORT.md README.md
+  532  git commit -m "Git automation homework submission"
+  533  git push -u origin main
+  534  cp tasks.csv /mnt/c/Users/<YOUR_WINDOWS_USER>/Desktop/
+  535  cp TASK_REPORT.md /mnt/c/Users/<YOUR_WINDOWS_USER>/Desktop/
+  536  cp tasks.csv /mnt/c/Users/<YOUR_WINDOWS_USER>/Desktop/
+  537  cp TASK_REPORT.md /mnt/c/Users/<YOUR_WINDOWS_USER>/Desktop/
+  538  ls /mnt/c/Users
+  539  ~/git_hw_submit/devbox_automation
+  540  cp tasks.csv /mnt/c/Users/ASUS/Desktop/
+  541  cp TASK_REPORT.md /mnt/c/Users/ASUS/Desktop/
+  542  mkdir ~/devbox_automation
+  543  cd ~/devbox_automation
+  544  nano tasks.csv
+  545  cd ~/08_docker
+  546  ls -a
+  547  git init
+  548  git branch -M main
+  549  git status
+  550  git add index.js
+  551  git commit -m "initial version"
+  552  git config --global user.name "Marsel Abu Saleh"
+  553  git config --global user.email "brikmarsel@gmail.com"
+  554  git commit -m "initial version"
+  555  git log --oneline --max-count=3
+  556  cd ~/devbox_automation
+  557  nano tasks.csv
+  558  cat tasks.csv
+  559  nano commit.sh
+  560  chmod +x commit.sh
+  561  ./commit.sh 1000
+  562  TASKID - CurrentDateTime - BranchName - DevName - TaskDesc - OptionalMessage
+  563  git add index.js
+  564  git commit -m "initial version"
+  565  nano ~/devbox_automation/tasks.csv
+  566  cat tasks.csv
+  567  cd ~/devbox_automation
+  568  ./commit.sh 1000
+  569  cd ~/devbox_automation
+  570  nano commit.sh
+  571  chmod +x commit.sh
+  572  res.end('Hello from Node.js 👋');
+  573  cd ~/devbox_automation
+  574  ./commit.sh 1000 "change response text"
+  575  cd ~/devbox_automation
+  576  ./commit.sh 1000 "change response text"
+  577  cd ~/08_docker
+  578  git status
+  579  cd ~/devbox_automation
+  580  ./commit.sh 1000 "change response text"
+  581  mkdir -p ~/git_hw_submit/devbox_automation
+  582  mkdir -p ~/git_hw_submit/repos/repo_a
+  583  mkdir -p ~/git_hw_submit/repos/repo_b
+  584  mkdir -p ~/git_hw_submit/repos/repo_c
+  585  cd ~/git_hw_submit/repos/repo_a
+  586  git init
+  587  git branch -M main
+  588  echo "Repo A" > README.md
+  589  git add README.md
+  590  git commit -m "init repo_a"
+  591  cd ~/git_hw_submit/repos/repo_b
+  592  git init
+  593  git branch -M main
+  594  echo "Repo B" > README.md
+  595  git add README.md
+  596  git commit -m "init repo_b"
+  597  cd ~/git_hw_submit/repos/repo_c
+  598  git init
+  599  git branch -M main
+  600  echo "Repo C" > README.md
+  601  git add README.md
+  602  git commit -m "init repo_c"
+  603  cd ~/git_hw_submit/repos/repo_a
+  604  git checkout -b BR_README
+  605  cd ~/git_hw_submit/repos/repo_b
+  606  git checkout -b BR_LOGIN
+  607  cd ~/git_hw_submit/repos/repo_c
+  608  git checkout -b BR_API
+  609  cd ~/git_hw_submit/devbox_automation
+  610  nano tasks.csv
+  611  cat tasks.csv
+  612  nano commit.sh
+  613  chmod +x commit.sh
+  614  cd ~/git_hw_submit/repos/repo_a
+  615  git checkout BR_README
+  616  echo "Updated README for task 1000" >> README.md
+  617  cd ~/git_hw_submit/repos/repo_b
+  618  git checkout BR_LOGIN
+  619  echo "login page placeholder" > login.txt
+  620  cd ~/git_hw_submit/repos/repo_c
+  621  git checkout BR_API
+  622  echo "api placeholder" > api.txt
+  623  cd ~/git_hw_submit/devbox_automation
+  624  ./commit.sh 1000 "initial version"
+  625  ./commit.sh 1001 "first draft"
+  626  ./commit.sh 1002 "skeleton"   # רק אם יש שורה ב-CSV
+  627  cd ~/git_hw_submit/repos/repo_a && git log --oneline -3
+  628  cd ~/git_hw_submit/repos/repo_b && git log --oneline -3
+  629  cd ~/git_hw_submit/devbox_automation
+  630  nano generate_report.sh
+  631  chmod +x generate_report.sh
+  632  ./generate_report.sh ./tasks.csv
+  633  cd ~/git_hw_submit/devbox_automation
+  634  nano .gitignore
+  635  nano README.md
+  636  git remote add origin <URL>
+  637  mkdir -p ~/git_hw_submit/devbox_automation
+  638  mkdir -p ~/git_hw_submit/repos/repo_a
+  639  mkdir -p ~/git_hw_submit/repos/repo_b
+  640  cd ~/git_hw_submit/repos/repo_a
+  641  git init
+  642  git branch -M main
+  643  echo "Repo A" > README.md
+  644  git add README.md
+  645  git commit -m "init repo_a"
+  646  git checkout -b BR_README
+  647  cd ~/git_hw_submit/repos/repo_b
+  648  git init
+  649  git branch -M main
+  650  echo "Repo B" > README.md
+  651  git add README.md
+  652  git commit -m "init repo_b"
+  653  git checkout -b BR_LOGIN
+  654  cd ~/git_hw_submit/devbox_automation
+  655  nano tasks.csv
+  656  cat tasks.csv
+  657  nano commit.sh
+  658  chmod +x commit.sh
+  659  nano commit.sh
+  660  nano generate_report.sh
+  661  chmod +x generate_report.sh
+  662  echo "task 1000 change" >> ~/git_hw_submit/repos/repo_a/README.md
+  663  echo "login placeholder" > ~/git_hw_submit/repos/repo_b/login.txt
+  664  cd ~/git_hw_submit/devbox_automation
+  665  ./commit.sh 1000 "initial version"
+  666  ./commit.sh 1001 "first draft"
+  667  ./generate_report.sh ./tasks.csv
+  668  code ~/git_hw_submit
+  669  cat app.js
+  670  cd ~/08_docker/mvc-sqlite-auth
+  671  cat app.js
+  672  cd ~/08_docker/mvc-sqlite-auth
+  673  cat app.js
+  674  cd ~/08_docker/mvc-sqlite-auth
+  675  cat app.js
+  676  cat ~/08_docker/mvc-sqlite-auth/app.js
+  677  cd ~/08_docker/mvc-sqlite-auth
+  678  cat app.js
+  679  cd ~/08_docker/mvc-sqlite-auth
+  680  cat app.js
+  681  ls -l app.js
+  682  wc -l app.js
+  683  cat > app.js <<'EOF'
+  684  const express = require("express");
+  685  const app = express();
+  686  app.use(express.json());
+  687  app.get("/", (req, res) => res.send("OK - mvc-sqlite-auth is running"));
+  688  const PORT = process.env.PORT || 3000;
+  689  app.listen(PORT, () => {
+  690    console.log(`Server running on http://localhost:${PORT}`);
+  691  });
+  692  EOF
+  693  npm i express
+  694  npm run dev
+  695  cd /mnt/c/Users/ASUS/Desktop
+  696  nano app.js
+  697  cd ~/08_docker/mvc-sqlite-auth
+  698  nano app.js
+  699  cd ~/08_docker/mvc-sqlite-auth
+  700  cp db.sqlite /mnt/c/Users/ASUS/Desktop/
+  701  node -v
+  702  npm -v
+  703  mkdir mvc-sqlite-auth
+  704  cd mvc-sqlite-auth
+  705  npm init -y
+  706  npm i express ejs sqlite3 bcrypt express-session connect-sqlite3
+  707  npm i -D nodemon
+  708  mkdir config controllers models repositories services routes middleware views
+  709  touch app.js db.sqlite
+  710  touch config/db.js config/session.js
+  711  touch controllers/authController.js
+  712  touch models/user.js
+  713  touch repositories/userRepository.js
+  714  touch services/authService.js
+  715  touch routes/authRoutes.js
+  716  touch middleware/requireAuth.js
+  717  touch views/layout.ejs views/home.ejs views/login.ejs views/register.ejs
+  718  npm run dev
+  719  npm run
+  720  npm install --save-dev nodemon
+  721  npm run dev
+  722  pwd
+  723  ls
+  724  npm run
+  725  cat package.json
+  726  which npm
+  727  which node
+  728  npm config get cache
+  729  sudo apt update
+  730  sudo apt install curl -y
+  731  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+  732  source ~/.bashrc
+  733  nvm install --lts
+  734  nvm use --lts
+  735  which node
+  736  which npm
+  737  npm -v
+  738  node -v
+  739  npm run dev
+  740  npm pkg get scripts
+  741  npm pkg set scripts.start="node app.js"
+  742  npm pkg set scripts.dev="nodemon app.js"
+  743  npm pkg get scripts
+  744  npm run dev
+  745  npx nodemon app.js
+  746  npm pkg set scripts.dev="npx nodemon app.js"
+  747  npm run dev
+  748  ls -l node_modules/.bin/nodemon
+  749  file node_modules/.bin/nodemon
+  750  chmod +x node_modules/.bin/nodemon
+  751  npm run dev
+  752  nano plotgen.py
+  753  docker build -t imgplotparam .
+  754  docker run --rm -v "$(pwd)/output:/app/output" imgplotparam 20
+  755  ls output
+  756  python3
+  757  mkdir -p output
+  758  docker run --rm -v "$(pwd)/output:/app/output" imgplotparam 20
+  759  nano Dockerfile
+  760  docker build -t imgplotparam .
+  761  docker run --rm -v "$(pwd)/output:/app/output" imgplotparam 20
+  762  import sys
+  763  docker run --rm\
+  764  docker build -t imgplotparam .
+  765  ls -la
+  766  wc -c Dockerfile
+  767  cat > Dockerfile <<'EOF'
+  768  FROM python:3.11-slim
+  769  WORKDIR /app
+  770  RUN pip install -npm run dev
+  771  npm install
+  772  npm run dev
+  773  cd ~/08_docker/mvc-sqlite-auth
+  774  ls
+  775  npm run dev
+  776  cd ~/08_docker/mvc-sqlite-auth
+  777  npm run dev
+  778  cd ~/08_docker/mvc-sqlite-auth
+  779  npm install express
+  780  npm run dev
+  781  cd ~/08_docker/mvc-sqlite-auth
+  782  npm run dev
+  783  cd ~/08_docker/mvc-sqlite-auth
+  784  npm install bcrypt
+  785  npm uninstall bcrypt
+  786  npm install bcryptjs
+  787  npm run dev
+  788  npm ls bcrypt
+  789  cd ~/08_docker/mvc-sqlite-auth
+  790  pwd
+  791  npm install bcryptjs
+  792  npm ls bcryptjs
+  793  nano services/authService.js
+  794  npm run dev
+  795  nano app.js
+  796  cd ~/08_docker/mvc-sqlite-auth
+  797  cd ~/08_docker/mvc-sqlite-auth
+  798  mkdir -p config
+  799  nano config/db.js
+  800  npm install sqlite3
+  801  npm run dev
+  802  get init
+  803  git init
+  804  git add .
+  805  git commit -m "first commit"
+  806  cd ~/08_docker/mvc-sqlite-auth
+  807  npm install express-session
+  808  npm run dev
+  809  cd ~/08_docker/mvc-sqlite-auth
+  810  npm run dev
+  811  code .
+  812  git remote show origin
+  813  cd 
+  814  cd exam-exc
+  815  find ~ -type d -name "exam-exc" 2>/dev/null
+  816  cd ~/08_docker
+  817  git clone https://github.com/brikmarsel-beep/exam-exc.git
+  818  cd exam-exc
+  819  ls -la
+  820  nano py.convertor
+  821  python3 py.convertor
+  822  nano Dockerfile
+  823  ls -la
+  824  docker build -t py-convertor .
+  825  docker images | head
+  826  docker run -it --name conv1 py-convertor
+  827  docker run -it --name conv2 py-convertor
+  828  docker ps -a
+  829  mkdir -p Output
+  830  docker ps -a > Output/txt.containers
+  831  cat Output/txt.containers
+  832  mkdir -p History
+  833  history > History/txt2.history
